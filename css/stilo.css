@@ -1,0 +1,331 @@
+:root {
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --dark-desaturated: hsl(167, 40%, 24%);
+    --dark-blue: hsl(198, 62%, 26%);
+    --dark-moderate: hsl(168, 34%, 41%);
+    --very-dark: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Fraunces", serif;
+}
+
+.container {
+    max-width: 1400px;
+}
+
+.header {
+    width: 100%;
+    background-image: url(../images/mobile/image-header.jpg);
+    height: 50vh;
+    background-position: 0 80%;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.header::after {
+    content: "WE ARE CREATIVES";
+    text-align: center;
+    margin-top: 10%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 2rem;
+}
+.header_arrow{
+    width:max-content;
+    height: 25%;
+    position: absolute;
+    top:45%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header_icon{
+    height: 100%;
+}
+.nav_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_figure,
+.header_label {
+    margin: 5%;
+}
+
+.header_img {
+    display: block;
+}
+
+.header_menu {
+    display: block;
+    cursor: pointer;
+}
+
+.header_input,
+.header_ul {
+    display: none;
+}
+
+.header_ul {
+    position: fixed;
+    top: 10%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    background-color: hsla(212, 27%, 19%, .7);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    clip-path: circle(0% at center);
+    transition: clip-path .3s ease-in-out;
+}
+
+.header_li {
+    list-style: none;
+}
+
+.header_a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.header_a:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.header_a::after {
+    display: block;
+    content: "";
+    border-bottom: 2px solid white;
+    transition: clip-path .3s;
+    clip-path: var(--clippy);
+}
+
+.header_input:checked+.header_ul {
+    clip-path: circle(100% at center);
+}
+
+.section {
+    display: grid;
+    grid-template-rows: repeat(8,1fr);
+    grid-template-areas: 
+    "section1"
+    "section2"
+    "section3"
+    "section4"
+    "section5"
+    "section5"
+    "section6"
+    "section6";
+    margin: 0 auto;
+}
+.section1{
+    grid-area: section1;
+    background-image: url(../images/mobile/image-transform.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-area: section2;
+    text-align: center;
+    padding: 80px 0;
+}
+.section3{
+    grid-area: section3;
+    background-image: url(../images/mobile/image-stand-out.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.section4{
+    grid-area: section4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+.section5{
+    grid-area: section5;
+    background-image: url(../images/mobile/image-graphic-design.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+.section6{
+    grid-area: section6;
+    background-image: url(../images/mobile/image-photography.jpg);
+    background-size: cover;
+    background-position: top;
+ 
+    position: relative;
+}
+.contenedor{
+    position: absolute;
+    text-align: center;
+    bottom: 15%;
+    margin: 0 auto;
+}
+.titulo{
+    font-size: 1.5rem;
+}
+.parrafo{
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-inline: auto;
+    width: 80%;
+}
+.info{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.title{
+    font-size: 2rem;
+}
+.paragraph{
+    line-height: 1.5;
+    margin-block: 20px;
+}
+.main{
+    padding: 10% 0;
+}
+.main_title{
+    text-align: center;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+    text-transform: uppercase;
+}
+.card{
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.main_img{
+    border-radius: 50%;
+    align-self: center;
+}
+.main_paragraph{
+    margin: 5% auto;
+    width: 80%;
+    text-align: center;
+}
+.main_h3{
+    margin-top: 5%;
+    font-weight: 400;
+    color:var(--Dark-grayish-blue)
+}
+
+.article{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    "figure1 figure2"
+    "figure3 figure4";
+}
+.figure1{
+    grid-area: figure1;
+}
+.figure2{
+    grid-area: figure2;
+
+}
+.figure3{
+    grid-area: figure3;
+
+}
+.figure4{
+    grid-area: figure4;
+}
+.article_img{
+    width: 100%;
+    height: 100%;
+}
+.footer{
+    background-color: var(--dark-moderate);
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer_img{
+    color: black;
+}
+.footer_links{
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+.footer_nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% 0 15%;
+}
+.footer_icons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5%;
+}
+.footer_icon{
+    width: 25px;
+    height: 25px;
+}
+@media  (400px <= width ) {
+    .section {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas: 
+        "section2 section1"
+        "section3 section4"
+        "section5 section6";
+        margin: 0 auto;
+    }
+    .cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .article{
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(1,1fr);
+        grid-template-areas: 
+        "figure1 figure2 figure3 figure4";
+    }
+}
